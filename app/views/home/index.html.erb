@@ -1,4 +1,10 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
+
+
+<% @posts.each do |post| %>
+	<% if post.published? %>
+	    <h4><%= post.title %></h4>
+	    <small><%= post.created_at.strftime("%e %b %Y")%></small>
+	    <p><%= post.body.html_safe %></p>
+	    <br>
+    <% end %>
 <% end %>

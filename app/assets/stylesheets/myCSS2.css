@@ -1,0 +1,26 @@
+.myBackground .bg{
+  	position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('invaders.png') center center;
+    opacity: 0.8;
+    /*background-repeat: repeat;
+    background-attachment: scroll;*/
+    background-size: 175px;
+}
+
+.navbar-inverse .navbar-inner {
+  background-color: #00111A;
+  background-image: none;
+}
+
+.navbar-inverse .brand {
+  background-color: transparent;
+}
+
+.myContainer{
+  text-align: center;
+}
