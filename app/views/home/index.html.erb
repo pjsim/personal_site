@@ -1,10 +1,39 @@
-
-
 <% @posts.each do |post| %>
+
 	<% if post.published? %>
 	    <h4><%= post.title %></h4>
 	    <small><%= post.created_at.strftime("%e %b %Y")%></small>
 	    <p><%= post.body.html_safe %></p>
 	    <br>
     <% end %>
+
+    <% if post.comments.empty? %>
+    	<h6>No comments yet...</h6>
+    <% else %>
+    	<h5>Comments:</h5>
+		<%= render post.comments %>
+	<% end %>
+
+	<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">
+    	Add a comment
+    </button>
+     
+    <div id="demo" class="collapse"> 	
+    	<h5 id="commenting">Add a new comment:</h5>
+		<%= form_for([post, post.comments.build]) do |f| %>
+		  <div class="field">
+		    <%= f.label 'Your name' %><br />
+		    <%= f.text_field :commenter, :class => "span8"%>
+		  </div>
+		  <div class="field">
+		    <%= f.label 'comment' %><br />
+		    <%= f.text_area :body, :rows => 10, :class => "span8" %>
+		  </div>
+		  <div class="actions">
+		    <%= f.submit %>
+		  </div>
+		<% end %>
+	</div>
+
 <% end %>
+

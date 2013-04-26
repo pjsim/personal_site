@@ -2,7 +2,9 @@ Myapp::Application.routes.draw do
 
   get "contact/index"
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   get "showreel/index", :id => "showreel"
   match "showreel" => "showreel#index"
