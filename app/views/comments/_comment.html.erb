@@ -1,11 +1,7 @@
+<strong><%= comment.commenter %></strong><br>
 <p>
-  <b>Commenter:</b>
-  <%= comment.commenter %>
-</p>
- 
-<p>
-  <b>Comment:</b>
-  <%= comment.body %>
+	<%= comment.body %><br>
+	<small>Posted on: <%= comment.created_at.strftime("%e %b %Y")%></small>
 </p>
 
 <% if current_user && (current_user.has_role? :admin) %>
@@ -15,3 +11,4 @@
 		               :method => :delete %>
 		</p>
 <% end %>
+<br>
