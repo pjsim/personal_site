@@ -31,8 +31,11 @@
       <%= link_to 'Posts', posts_path %>
     </li>
     <% end %>
-
+    <% if !current_user.has_role? :admin %>
+    <li style="padding-left:350px">
+    <% else %>
     <li>
+    <% end %>
       <%= link_to 'Edit account', edit_user_registration_path %>
     </li>
     <li>
