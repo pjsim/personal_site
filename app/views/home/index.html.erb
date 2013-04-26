@@ -3,7 +3,7 @@
 	<% if post.published? %>
 	    <h4><%= post.title %></h4>
 	    <small><%= post.created_at.strftime("%e %b %Y")%></small>
-	    <p><%= post.body.html_safe %></p>
+	    <p style = "font-size:18px;"><%= post.body.html_safe %></p>
 	    <br>
     <% end %>
 
