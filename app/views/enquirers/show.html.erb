@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @enquirer.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @enquirer.email %>
+</p>
+
+<p>
+  <b>Consent:</b>
+  <%= @enquirer.consent %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @enquirer.phone %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @enquirer.message %>
+</p>
+
+<p>
+  <b>Message type:</b>
+  <%= @enquirer.message_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_enquirer_path(@enquirer) %> |
+<%= link_to 'Back', enquirers_path %>

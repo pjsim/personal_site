@@ -1,5 +1,8 @@
 Myapp::Application.routes.draw do
 
+  resources :enquirers
+
+
   get "contact/index"
 
   resources :posts do

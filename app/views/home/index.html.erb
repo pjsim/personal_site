@@ -10,16 +10,18 @@
     <% if post.comments.empty? %>
     	<h6>No comments yet...</h6>
     <% else %>
+    	<% if current_user && (current_user.has_role? :admin) %>
     	<h5>Comments:</h5>
 		<%= render post.comments %>
+		<% end %>
 	<% end %>
 
-	<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">
+	<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#<%= post.id %>">
     	Add a comment
     </button>
      
-    <div id="demo" class="collapse"> 	
-    	<h5 id="commenting">Add a new comment:</h5>
+    <div id="<%= post.id %>" class="collapse"> 	
+    	<h5>Add a new comment:</h5>
 		<%= form_for([post, post.comments.build]) do |f| %>
 		  <div class="field">
 		    <%= f.label 'Your name' %><br />
