@@ -1,23 +1,11 @@
 <h3>Contact Me</h3>
 <ul>
-	<li>Email: phillip.j.simmonds@gmail.com</li>
+	<li>Email: <a href="mailto:phillip.j.simmonds@gmail.com">Email Me</a> </li>
 	<li>Phone: +61418277239</li>
-	<li>Vimeo: </li>
-	<li>LinkedIn: </li>
+	<li>Vimeo: <a href="http://vimeo.com/phillipsimmonds">Vimeo</a> </li>
+	<li>LinkedIn: <a href="http://au.linkedin.com/in/phillipsimmonds">LinkedIn</a> </li>
 	<li>Facebook: </li>
-	<li>GitHub: </li>
+	<li>GitHub: <a href="https://github.com/pjsim">GitHub</a> </li>
 </ul>
 
-<%= simple_form_for(@enquirer) do |f| %>
-  <%= f.error_notification %>
 
-
-    <%= f.input :name,  :input_html => { :class => "span5"}, :placeholder => "Your name", :autofocus => true, :required => true %>
-    <%= f.input :email, :input_html => { :class => "span5"}, :placeholder => "Your email", :required => true %> 
-    <%= f.input :phone, :input_html => { :class => "span5"} %> 
-    <%= f.input :message, :input_html => { :rows => 10, :class => "span9"}, :placeholder => "Your Message", :required => true %>
-    <%= f.input :message_type, :collection => ['General enquiry', 'Website error'], :default => 'General enquiry' %>
-    <%= f.submit 'Send Enquiry', :class => 'btn btn-success' %>
-
-
-<% end %>

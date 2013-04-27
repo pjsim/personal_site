@@ -1,4 +1,4 @@
-MyNewApp::Application.configure do
+Myapp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -30,8 +30,6 @@ MyNewApp::Application.configure do
     user_name: ENV['GMAIL_USERNAME'],
     password: ENV['GMAIL_PASSWORD']
   }
-
-
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
