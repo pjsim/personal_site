@@ -1,16 +1,15 @@
 <% @posts.each do |post| %>
-
+	
 	<% if post.published? %>
 	    <h4><%= post.title %></h4>
-	    <small><%= post.created_at.strftime("%e %b %Y")%></small>
-	    <p style = "font-size:18px;"><%= post.body.html_safe %></p>
+	    <small>Posted on: <%= post.created_at.strftime("%e %b %Y")%></small>
+	    <p style = "font-size:16px;"><%= post.body.html_safe %></p>
 	    <br>
     <% end %>
 
     <% if post.comments.empty? %>
     	<h6>No comments yet...</h6>
     <% else %>
-       	<em><h5>Post Comments:</h5></em>
 		<%= render post.comments %>
 	<% end %>
 
@@ -33,6 +32,9 @@
 		    <%= f.submit %>
 		  </div>
 		<% end %>
+		<br>
+		<br>
+		<br>
 	</div>
 
 <% end %>

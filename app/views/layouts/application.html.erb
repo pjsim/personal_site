@@ -2,14 +2,17 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Myapp" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Myapp" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "Phillip J Simmonds" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Phillip J Simmonds" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
-  <body class="<%= controller_name %> <%= action_name %>">
+  
+  <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+
+  <body class="<%= controller_name %> <%= action_name %>" style="font-family: 'Noto Sans', sans-serif; font-weight:800px;">
     <div class="navbar navbar-fixed-top navbar-inverse">
       <nav class="navbar-inner">
         <div class="container">
@@ -31,8 +34,28 @@
         </div>
       </div> <!--! end of .container -->
     </div> <!--! end of #main -->
+
+    <div class="navbar navbar-fixed-bottom navbar-inverse">
+      <div id="footer">
+      <nav class="navbar-inner">
+        <div class="container">
+        </div>
+      </nav>
+      </div>
+    </div>
+
+    <footer>
+    <div class="navbar navbar-fixed-bottom navbar-inverse">
+        <div class="container">
+          <%= render 'layouts/footer' %>
+        </div>
+      </div>
+    </div>
+
     <div class="myBackground">
       <div class="bg"></div>
     </div>
+    </footer>
+
   </body>
 </html>
