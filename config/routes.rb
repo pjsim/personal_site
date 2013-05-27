@@ -1,6 +1,8 @@
 Myapp::Application.routes.draw do
 
 
+  get "works/index"
+
   resources :enquirers
 
 
