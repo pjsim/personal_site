@@ -1,0 +1,11 @@
+<div class="dropdown">
+	<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+		<%= link_to "All", works_path, :class => "btn" %>
+		<b class="caret"></b>
+	</a>
+	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		<li><%= link_to "3D", works_path, :class => "btn" %></li>
+		<li><%= link_to "Web Dev", works_path, :class => "btn" %></li>
+		<li><%= link_to "Other", works_path, :class => "btn" %></li>
+	</ul>
+</div>
