@@ -9,13 +9,15 @@ invaders.png: invaders-89f9edd6d0b68e90ba58f95eeaa8f23f.png
 invaders/index.png: invaders-89f9edd6d0b68e90ba58f95eeaa8f23f.png
 me.jpg: me-54705b0006a19c68dc79742c9c9fa5da.jpg
 me/index.jpg: me-54705b0006a19c68dc79742c9c9fa5da.jpg
+pjsim_logo.png: pjsim_logo-311fcf8c7d60c391ae1b87c723eacc94.png
+pjsim_logo/index.png: pjsim_logo-311fcf8c7d60c391ae1b87c723eacc94.png
 sprite-rsmb-x2.png: sprite-rsmb-x2-2d971d516d4e575083dae6fd0358ec35.png
 sprite-rsmb-x2/index.png: sprite-rsmb-x2-2d971d516d4e575083dae6fd0358ec35.png
 sprite-rsmb.png: sprite-rsmb-b3401a1724001801a13f92ba7e26b857.png
 sprite-rsmb/index.png: sprite-rsmb-b3401a1724001801a13f92ba7e26b857.png
 application.js: application-d13303d0e4dc3ea45478e506e53c5166.js
 application/index.js: application-d13303d0e4dc3ea45478e506e53c5166.js
-application.css: application-98c4d5abff94c1ec08f873c1afb67fad.css
-application/index.css: application-98c4d5abff94c1ec08f873c1afb67fad.css
+application.css: application-7fc69edba3a23aeb7c536aa75e53c99b.css
+application/index.css: application-7fc69edba3a23aeb7c536aa75e53c99b.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 jquery/index.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
