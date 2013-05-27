@@ -1,7 +1,7 @@
 Myapp::Application.routes.draw do
 
 
- resources :works
+  resources :works
 
   resources :enquirers
 
@@ -15,9 +15,6 @@ Myapp::Application.routes.draw do
 
   get "about/index", :id => "about"
   match "about" => "about#index"
-
-  get "contact/index", :id => "contact"
-  match "contact" => "contact#index"
 
   get "admin/index", :id => "admin"
   match "admin" => "admin#index"
