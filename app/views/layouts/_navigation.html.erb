@@ -9,9 +9,16 @@
   <li>
   <%= link_to 'Showreel', showreel_path %>
   </li>
+
+  <% if !user_signed_in? && current_user.has_role? :admin %>
+
   <li>
   <%= link_to 'Websites', websites_path %>
   </li>
+
+  <% end %>
+
+  
   <li>
     <%= link_to 'About Me', about_path %>
   </li>
