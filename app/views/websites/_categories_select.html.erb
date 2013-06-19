@@ -1,0 +1,16 @@
+<div class="dropdown">
+	<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+		<% if params[:category] %>
+			<%= params[:category] %>
+		<% else %>
+			<%= "Sydney Dev Camp" %>
+		<% end %>
+		<b class="caret"></b>
+	</a>
+	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		<% @categories.each do |category| %>
+			<li><%= link_to category.name, root_path(:category => category.name) %></li>
+		<% end %>
+		<li><%= link_to "Sydney Dev Camp", root_path unless !params[:category] %></li>
+	</ul>
+</div>

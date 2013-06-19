@@ -15,7 +15,7 @@
 .content {
   background-color: #eee;
   padding: 20px;
-  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  margin: 0 -20px;
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
@@ -24,6 +24,7 @@
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 
+
 body{
     position: absolute;
     z-index: -1;
@@ -31,9 +32,15 @@ body{
     left: 0;
     width: 100%;
     height:100%;
-    background: url('invaders.png') center center;
+    background: url('invaders2.png') center center;
     background-repeat: repeat;
     background-size: 175px;
+    
+      background-color: #fff;
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
 }
 
 .navbar-inverse .navbar-inner {
@@ -54,18 +61,78 @@ dd, dt{
   font-size: 16px;
 }
 
-#footer{
-    opacity: 0.9;
-}
-
-#footer-buttons{
-    opacity: 1;
-}
-
 li{
     font-size: 14px;
 }
 
 #contact_row td{
     text-align: center;
+}
+
+
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+img{
+  border-radius: 10px;
 }

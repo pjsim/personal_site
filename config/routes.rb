@@ -1,7 +1,10 @@
 Myapp::Application.routes.draw do
 
 
-  resources :works
+  resources :categories
+
+
+  resources :websites
 
   resources :enquirers
 

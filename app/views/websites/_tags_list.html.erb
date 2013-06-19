@@ -1,0 +1,11 @@
+<ul> <%= render 'websites/categories_select' %>
+	<% @tags.each do |tag| %>
+		<% if !params[:category] %>
+			<li><%= link_to tag.name, root_path(:tag => tag.name) %></li>
+		<% else %>
+			<% if tag.category && tag.category.name == params[:category] %>
+				<li><%= link_to tag.name, root_path(:category => tag.category.name, :tag => tag.name) %></li>
+			<% end %>
+		<% end %>
+	<% end %>
+</ul>

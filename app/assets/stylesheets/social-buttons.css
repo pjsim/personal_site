@@ -11,14 +11,16 @@
   cursor: pointer;
   display: inline-block;
   position: relative;
-  margin-left: 15px;
-  z-index: 400; }
+  margin-left: 10px;
+  z-index: 400; 
+  }
 
 
   .social-btn:before, .social-btn:after {
     content: "";
     display: block;
     position: relative; }
+
   .social-btn:before {
     border: solid 2px white;
     -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
@@ -31,7 +33,7 @@
     .social-btn:before:active {
       background-color: #c5d1d7; }
   .social-btn:after {
-    background: url("sprite-rsmb.png") no-repeat;
+    background: url("sprite-rsmb.png");
     border: solid 2px #c5d1d7;
     -webkit-box-shadow: inset 0px 1px 2px 0px white;
     box-shadow: inset 0px 1px 2px 0px white;
@@ -87,7 +89,7 @@
 .facebook {
   background-color: #4a6ea9; }
   .facebook:after {
-    background-position: 0 0;
+    background-position: -2px -2px;
     border-color: #3a5786;
     -webkit-box-shadow: inset 0px 1px 2px 0px #9eb3d5;
     box-shadow: inset 0px 1px 2px 0px #9eb3d5; }
@@ -127,7 +129,7 @@
 .github {
   background-color: #eeeeee; }
   .github:after {
-    background-position: -28px -56px;
+    background-position: -30px -58px;
     border-color: #d4d4d4;
     -webkit-box-shadow: inset 0px 1px 2px 0px white;
     box-shadow: inset 0px 1px 2px 0px white; }
@@ -136,9 +138,9 @@
   .github:active {
     background-color: #d4d4d4; }
   .github.alt:after {
-    background-position: 0 -112px; }
+    background-position: -2px -114px; }
   .github.alt2:after {
-    background-position: 0 -84px; }
+    background-position: -2px -86px; }
 
 .gplus {
   background-color: #e46044; }
@@ -191,7 +193,7 @@
 .linkedin {
   background-color: #0097bd; }
   .linkedin:after {
-    background-position: 0 -196px;
+    background-position: -2px -198px;
     border-color: #006e8a;
     -webkit-box-shadow: inset 0px 1px 2px 0px #3ed8ff;
     box-shadow: inset 0px 1px 2px 0px #3ed8ff; }
@@ -203,7 +205,7 @@
 .mail {
   background-color: #e3e9ec; }
   .mail:after {
-    background-position: 0 -224px;
+    background-position: -2px -226px;
     border-color: #c5d1d7;
     -webkit-box-shadow: inset 0px 1px 2px 0px white;
     box-shadow: inset 0px 1px 2px 0px white; }
@@ -251,7 +253,7 @@
 .skype {
   background-color: #08a7e3; }
   .skype:after {
-    background-position: -28px 0;
+    background-position: -30px -2;
     border-color: #0683b2;
     -webkit-box-shadow: inset 0px 1px 2px 0px #71d4fa;
     box-shadow: inset 0px 1px 2px 0px #71d4fa; }
@@ -265,7 +267,7 @@
 .tumblr {
   background-color: #3c5a76; }
   .tumblr:after {
-    background-position: 0 -308px;
+    background-position: -2 -310px;
     border-color: #2b4054;
     -webkit-box-shadow: inset 0px 1px 2px 0px #779aba;
     box-shadow: inset 0px 1px 2px 0px #779aba; }
@@ -277,7 +279,7 @@
 .twitter {
   background-color: #00aced; }
   .twitter:after {
-    background-position: 0 -336px;
+    background-position: -2 -334px;
     border-color: #0087ba;
     -webkit-box-shadow: inset 0px 1px 2px 0px #6ed7ff;
     box-shadow: inset 0px 1px 2px 0px #6ed7ff; }
@@ -291,7 +293,7 @@
 .vimeo {
   background-color: #5bc8ff; }
   .vimeo:after {
-    background-position: 0 -392px;
+    background-position: -2px -393px;
     border-color: #28b7ff;
     -webkit-box-shadow: inset 0px 1px 2px 0px #dbf3ff;
     box-shadow: inset 0px 1px 2px 0px #dbf3ff; }
@@ -349,3 +351,5 @@
     background-color: #fd694c; }
   .youtube-alt:active {
     background-color: #e02703; }
+
+

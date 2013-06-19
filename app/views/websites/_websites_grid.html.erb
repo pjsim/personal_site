@@ -1,0 +1,9 @@
+<% @websites.each do |website| %>
+	<div style="width: 260px; height: 190px; float:left">
+		 <%= link_to (image_tag "spotHunt.jpg", :style => 'height: 150px; width: 240px;'), root_path(:website => website.name) %>
+	</div>
+<% end %>
+<div style='float:left'>
+<%= will_paginate @websites %>
+</div>
+
