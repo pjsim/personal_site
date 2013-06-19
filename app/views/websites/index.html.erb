@@ -14,6 +14,7 @@
             <% @websites.each do |website| %>
                 <% if website.name == params[:website] %>
                     <h3><%= website.name %></h3><br>
+                    <h3><a href='<%= website.url %>'><%= website.url %></a></h3>
                     <p><%= website.description %></p><br>
                     <h5><%= website.collaborators %><h5><br>
                 <% end %>
