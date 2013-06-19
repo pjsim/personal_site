@@ -14,7 +14,7 @@
             <% @websites.each do |website| %>
                 <% if website.name == params[:website] %>
                     <h3><%= website.name %></h3><br>
-                    <h5><a href='<%= website.url %>'><%= website.url %></a></h5>
+                    <h6><a href='<%= website.url %>' target='_blank'><%= website.url %></a></h6>
                     <p><%= website.description %></p><br>
                     <h5><%= website.collaborators %><h5><br>
                 <% end %>
@@ -27,6 +27,8 @@
 
 <hr>
 
+  <% if user_signed_in? %>
+    <% if current_user.has_role? :admin %>
 
 <h1>Listing websites</h1>
 <h1>ADMIN ONLY</h1>
@@ -60,3 +62,7 @@
 <br />
 
 <%= link_to 'New Website', new_website_path %>
+
+<% end %>
+
+<% end %>
