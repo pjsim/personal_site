@@ -10,15 +10,11 @@
   <%= link_to 'Showreel', showreel_path %>
   </li>
 
-  <% if user_signed_in? %>
-    <% if current_user.has_role? :admin %>
+  <li>
+  <%= link_to 'Websites', websites_path %>
+  </li>
 
-      <li>
-      <%= link_to 'Websites', websites_path %>
-      </li>
 
-    <% end %>
-  <% end %>
 
 
   <li>

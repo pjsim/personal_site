@@ -1,6 +1,7 @@
 <% @websites.each do |website| %>
 	<div style="width: 335px; height: 230px; float:left">
-		 <%= link_to (image_tag "spotHunt.jpg", :style => 'height: 210px; width: 320px;'), root_path(:website => website.name) %>
+		 <%= link_to (image_tag website.avatar_url, :style => 'height: 210px; width: 320px;'), root_path(:website => website.name) %>
+		 <h4><%= website.name %></h4>
 	</div>
 <% end %>
 <div style='float:left'>
