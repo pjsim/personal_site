@@ -4,5 +4,5 @@ class Website < ActiveRecord::Base
   has_many :tags
   has_one :category
 
-  
+  mount_uploader :avatar, AvatarUploader
 end

@@ -36,7 +36,6 @@ body{
     background-repeat: repeat;
     background-size: 175px;
     
-      background-color: #fff;
     color: #333;
     font-family: verdana, arial, helvetica, sans-serif;
     font-size: 13px;
@@ -52,10 +51,7 @@ body{
   background-color: transparent;
 }
 
-.myContainer{
-  text-align: center;
-  padding-top: 20px;
-}
+
 
 dd, dt{
   font-size: 16px;
@@ -135,4 +131,10 @@ div {
 
 img{
   border-radius: 10px;
+}
+
+
+.myContainer{
+  text-align: center;
+  padding-top: 20px;
 }

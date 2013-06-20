@@ -41,4 +41,4 @@ gem 'closure-compiler'
 gem 'newrelic_rpm'
 gem "carrierwave"
 gem 'will_paginate'
-gem 'acts-as-taggable-on'
+gem "fog"
