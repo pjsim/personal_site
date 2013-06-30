@@ -2,7 +2,8 @@ class WebsitesController < ApplicationController
   # GET /websites
   # GET /websites.json
   def index
-    @websites = Website.paginate(:page => 1, :per_page => 4)
+    # @websites = Website.paginate(:page => 1, :per_page => 4)
+    @websites = Website.all
     @categories = Category.all
 
     respond_to do |format|

@@ -1,0 +1,8 @@
+<% @websites.each_with_index do |website, index| %>
+    <div class="item <% if index == 0 %>active<% end %>">
+    <a href='<%= website.url %>' target='_blank'><%= image_tag website.avatar_url, :style => 'height: 400px; width: 700px; padding-left: 150px' %></a>
+    <h3><a href='<%= website.url %>' target='_blank'><%= website.name %></a></h3>
+    <h5>Created by: <%= website.collaborators %></h5>
+    <p><%= website.description %></p>
+  </div>
+<% end %>

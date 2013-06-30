@@ -1,32 +1,32 @@
-<div class="tab-content">
-  <div class="tab-pane fade active in">
-    <div class="row-fluid">
-        <div class="well span2">
-            <% @websites.each do |website| %>
-                <%= link_to website.name, websites_path(:website => website.name) %>
-            <% end %>
+
+
+
+<div class="myContainer">
+  <div class="row-fluid">
+    <div class="span10 offset1" style='padding-right:20px;'>
+      <div id="this-carousel-id" class="carousel slide" data-interval="false">
+         <ol class="carousel-indicators">
+          <li data-target="#this-carousel-id" data-slide-to="0" class="active"></li>
+          <li data-target="#this-carousel-id" data-slide-to="1"></li>
+          <li data-target="#this-carousel-id" data-slide-to="2"></li>
+          <li data-target="#this-carousel-id" data-slide-to="3"></li>   
+        </ol>
+
+        <div class="carousel-inner">
+          <%= render 'websites/carousel_items' %>
         </div>
-        <div class="span7">
-            <%= render 'websites/websites_grid' %>
-        </div>
-        <div class="well span1" style='min-width:235px; margin-left:17px;'>
-            <% @websites.each do |website| %>
-                <% if website.name == params[:website] %>
-                    <h3><%= website.name %></h3><br>
-                    <h6><a href='<%= website.url %>' target='_blank'><%= website.url %></a></h6>
-                    <p><%= website.description %></p><br>
-                    <h5><%= website.collaborators %><h5><br>
-                <% end %>
-            <% end %>
-        </div>
+        <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+      </div>
     </div>
   </div>
 </div>
 
 
-<hr>
 
 
+  <% if user_signed_in? %>
+    <% if current_user.has_role? :admin %>
 
 <h1>Listing websites</h1>
 <h1>ADMIN ONLY</h1>
@@ -61,3 +61,5 @@
 
 <%= link_to 'New Website', new_website_path %>
 
+<% end %>
+<% end %>

@@ -1,0 +1,61 @@
+<div class="tab-content">
+  <div class="tab-pane fade active in">
+    <div class="row-fluid">
+        <div class="well span2">
+            <% @websites.each do |website| %>
+                <%= link_to website.name, websites_path(:website => website.name) %>
+            <% end %>
+        </div>
+        <div class="span7">
+            <%= render 'websites/websites_grid' %>
+        </div>
+        <div class="well span1" style='min-width:235px; margin-left:17px;'>
+            <% @websites.each do |website| %>
+                <% if website.name == params[:website] %>
+                    <h3><%= website.name %></h3><br>
+                    <h6><a href='<%= website.url %>' target='_blank'><%= website.url %></a></h6>
+                    <p><%= website.description %></p><br>
+                    <h5><%= website.collaborators %><h5><br>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+  </div>
+</div>
+<hr>
+
+
+
+<h1>Listing websites</h1>
+<h1>ADMIN ONLY</h1>
+<h1>PUT GITHUB REPO ON WEBSITE PAGE</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+    <th>Image</th>
+    <th>Description</th>
+    <th>Collaborators</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @websites.each do |website| %>
+  <tr>
+    <td><%= website.name %></td>
+    <td><%= website.url %></td>
+    <td><%= website.image %></td>
+    <td><%= website.description %></td>
+    <td><%= website.collaborators %></td>
+    <td><%= link_to 'Show', website %></td>
+    <td><%= link_to 'Edit', edit_website_path(website) %></td>
+    <td><%= link_to 'Destroy', website, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Website', new_website_path %>
+
