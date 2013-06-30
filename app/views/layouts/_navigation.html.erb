@@ -37,14 +37,14 @@
 
 
   <% if !user_signed_in? %>
-    <!--
+    
     <li style="padding-left:400px">
       <%= link_to 'Login', new_user_session_path %>
     </li> 
     <li>
       <%= link_to 'Sign Up', new_user_registration_path %>
     </li>
-    -->
+    
   <% else %>
 
     <% if current_user.has_role? :admin %>
